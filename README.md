@@ -19,8 +19,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 在前端使用路由要有个前提，那就是后端要将全部的路径都指向首页，即 index.html。否则后端会出现 404 错误。
 ***
 2. nextTick
-
-    * 定义（引用[官网](https://cn.vuejs.org/v2/api/#Vue-nextTick)
+   * 定义（引用[官网](https://cn.vuejs.org/v2/api/#Vue-nextTick)
 > 原文：当你设置 vm.someData = 'new value'，该组件不会立即重新渲染。当刷新队列时，组件会在下一个事件循环“tick”中更新。
 个人理解：dom更新是异步的，nextTick为该次事件循环后的回调钩子，确保了dom更新完毕，可以在nextTick中对更新后的dom进行操作
 ```
@@ -122,13 +121,13 @@ export const nextTick = (function () {
   }
 })()
 ```
-callbacks 存放 nextTick 回调函数
+   callbacks 存放 nextTick 回调函数
 
-* nextTickHandler 用于挨个触发callbacks里的每个回调
+   * nextTickHandler 用于挨个触发callbacks里的每个回调
 
-* timerFunc 根据浏览器支持情况（Promise/MutationObserver/setTimeout）将nextTickHandler封装延时函数（会在同步任务以及更新DOM的异步任务之后回调具体函数。）
+   * timerFunc 根据浏览器支持情况（Promise/MutationObserver/setTimeout）将nextTickHandler封装延时函数（会在同步任务以及更新DOM的异步任务之后回调具体函数。）
 
-* queueNextTick 作为钩子函数对外暴露，接受callback、context(上下文执行环境)，如若不传入任何参数，则返回一个新的Promise对象
+   * queueNextTick 作为钩子函数对外暴露，接受callback、context(上下文执行环境)，如若不传入任何参数，则返回一个新的Promise对象
 
 ***
 
