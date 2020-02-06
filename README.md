@@ -1,6 +1,6 @@
 # interview
 # 一、Vue
-1. React-router/Vue-Router  实现原理
+## 1. React-router/Vue-Router  实现原理
     * 路由
 简单来说路由就是用来跟后端服务器进行交互的一种方式，通过不同的路径，来请求不同的资源，请求不同的页面是路由的其中一种功能。
     * 实现原理
@@ -18,7 +18,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 ```
 在前端使用路由要有个前提，那就是后端要将全部的路径都指向首页，即 index.html。否则后端会出现 404 错误。
 ***
-2. nextTick
+## 2. nextTick
    * 定义（引用[官网](https://cn.vuejs.org/v2/api/#Vue-nextTick)
 > 原文：当你设置 vm.someData = 'new value'，该组件不会立即重新渲染。当刷新队列时，组件会在下一个事件循环“tick”中更新。
 个人理解：dom更新是异步的，nextTick为该次事件循环后的回调钩子，确保了dom更新完毕，可以在nextTick中对更新后的dom进行操作
