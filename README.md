@@ -3,8 +3,7 @@
 1. React-router/Vue-Router  实现原理
     * 路由
 简单来说路由就是用来跟后端服务器进行交互的一种方式，通过不同的路径，来请求不同的资源，请求不同的页面是路由的其中一种功能。
-***
-    * 1.2  实现原理
+    * 实现原理
 是基于html5 特性 history.pushState实现的
 history.pushState & history.replaceState 都是添加或修改历史记录条目，
 在不刷新页面的情况下
@@ -32,11 +31,10 @@ Vue.nextTick(function(){
 })
 ```
 （ps: $nextTick 返回一个Promise对象）
-- 2.2 异步更新队列
+   * 异步更新队列
 
 数据变化时，Vue开启一个队列，缓存同一循环事件中所有的dom更新，即同一watcher更新多次时，有且仅有一个入队列，避免了不必要的计算和dom更新
-***
-    * 源码
+   * 源码
 ```
 /**
  * Defer a task to execute it asynchronously.
