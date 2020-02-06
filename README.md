@@ -8,15 +8,15 @@
 history.pushState & history.replaceState 都是添加或修改历史记录条目，
 在不刷新页面的情况下
 
-使用方法
-```
-let stateObj = {
-    foo: "bar",
-};
-history.pushState(stateObj, "page 2", "bar.html");
+  * 使用方法
+  ```
+  let stateObj = {
+      foo: "bar",
+  };
+  history.pushState(stateObj, "page 2", "bar.html");
 
-```
-在前端使用路由要有个前提，那就是后端要将全部的路径都指向首页，即 index.html。否则后端会出现 404 错误。
+  ```
+  在前端使用路由要有个前提，那就是后端要将全部的路径都指向首页，即 index.html。否则后端会出现 404 错误。
 ***
 ## 2. nextTick
    * 定义（引用[官网](https://cn.vuejs.org/v2/api/#Vue-nextTick)
