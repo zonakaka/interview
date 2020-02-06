@@ -1,10 +1,10 @@
 # interview
 # 一、Vue
-- 1 React-router/Vue-Router  实现原理
-- 1.1  路由
+1. React-router/Vue-Router  实现原理
+    * 路由
 简单来说路由就是用来跟后端服务器进行交互的一种方式，通过不同的路径，来请求不同的资源，请求不同的页面是路由的其中一种功能。
 ***
-- 1.2  实现原理
+    * 1.2  实现原理
 是基于html5 特性 history.pushState实现的
 history.pushState & history.replaceState 都是添加或修改历史记录条目，
 在不刷新页面的情况下
@@ -19,9 +19,9 @@ history.pushState(stateObj, "page 2", "bar.html");
 ```
 在前端使用路由要有个前提，那就是后端要将全部的路径都指向首页，即 index.html。否则后端会出现 404 错误。
 ***
-- 2 nextTick
+2. nextTick
 
--2.1 定义（引用[官网](https://cn.vuejs.org/v2/api/#Vue-nextTick)
+    * 定义（引用[官网](https://cn.vuejs.org/v2/api/#Vue-nextTick)
 > 原文：当你设置 vm.someData = 'new value'，该组件不会立即重新渲染。当刷新队列时，组件会在下一个事件循环“tick”中更新。
 个人理解：dom更新是异步的，nextTick为该次事件循环后的回调钩子，确保了dom更新完毕，可以在nextTick中对更新后的dom进行操作
 ```
@@ -32,11 +32,11 @@ Vue.nextTick(function(){
 })
 ```
 （ps: $nextTick 返回一个Promise对象）
-2.2 异步更新队列
+- 2.2 异步更新队列
 
 数据变化时，Vue开启一个队列，缓存同一循环事件中所有的dom更新，即同一watcher更新多次时，有且仅有一个入队列，避免了不必要的计算和dom更新
 ***
-2.3 源码
+    * 源码
 ```
 /**
  * Defer a task to execute it asynchronously.
