@@ -130,4 +130,6 @@ export const nextTick = (function () {
    * queueNextTick 作为钩子函数对外暴露，接受callback、context(上下文执行环境)，如若不传入任何参数，则返回一个新的Promise对象
 
 ***
-
+## 3 compute 和 watch 
+> 这篇写的很详细 [Vue的computed和watch的细节全面分析](https://segmentfault.com/a/1190000012948175?utm_source=tag-newest)
+***
