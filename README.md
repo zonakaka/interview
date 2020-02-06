@@ -121,7 +121,7 @@ export const nextTick = (function () {
   }
 })()
 ```
-   callbacks 存放 nextTick 回调函数
+   * callbacks 存放 nextTick 回调函数
 
    * nextTickHandler 用于挨个触发callbacks里的每个回调
 
