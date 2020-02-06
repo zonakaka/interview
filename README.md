@@ -133,3 +133,4 @@ export const nextTick = (function () {
 ## 3 compute 和 watch 
 > 这篇写的很详细 [Vue的computed和watch的细节全面分析](https://segmentfault.com/a/1190000012948175?utm_source=tag-newest)
 ***
+# TODO computed 和 watch 源码理解
