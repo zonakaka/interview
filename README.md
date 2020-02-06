@@ -1,10 +1,10 @@
 # interview
 # 一、Vue
-1. React-router/Vue-Router  实现原理
-1.1 路由
+1 React-router/Vue-Router  实现原理
+1.1  路由
 简单来说路由就是用来跟后端服务器进行交互的一种方式，通过不同的路径，来请求不同的资源，请求不同的页面是路由的其中一种功能。
 ***
-1.2 实现原理
+1.2  实现原理
 是基于html5 特性 history.pushState实现的
 history.pushState & history.replaceState 都是添加或修改历史记录条目，
 在不刷新页面的情况下
