@@ -37,4 +37,49 @@
     </body>
 </html>
   ```
+  
+  ## 清除浮动
+  * 父元素设置height
+  * 父元素创建BFC 参考上面提到的BFC
+  * 父元素设置伪类
+  
+  ```
+   <html>
+    <head>
+        <style>
+            .container {
+                border: 1px solid red;
+                height: 300px;
+                /* 兼容ie6- */
+                zoom: 1; 
+            }
+            .container::after {
+                clear: both;
+                display: block;
+                height: 0;
+                content: '';
+            }
+            .img-container {
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="img-container">
+                <img src="./1.png">
+                
+            </div>
+            <div class="second">
+                css学习
+            </div>
+        </div>
+    </body>
+</html>
+
+  ```
+  
+  * 最后一个浮动元素后 增加一个空元素 设置该空元素 clear: both
+  
+  
  
