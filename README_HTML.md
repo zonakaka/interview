@@ -23,6 +23,9 @@
    ***
 * 块级元素？内联元素？空元素？
   * 块级元素
+  `div ul ol li dl dt dd h1 h2 h3 h4 p `
   * 内联元素
-  * 空元素
+  `a b span img input select strong`
+  * 空元素(即没有内容的HTML元素)
+  `<img> <link> <meta> <br> <hr>`
      
