@@ -85,5 +85,29 @@
   p{font-size:10px;-webkit-transform:scale(0.8);} //0.8是缩放比例 
   ```
   
+  ## 用css 实现一个三角形
+  ```
+  <html>
+    <head>
+        <style>
+            
+            .triangle {
+                height: 0;
+                width: 0;
+                border-left: 20px solid transparent;
+                border-top: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="triangle">
+
+        </div>
+    </body>
+</html>
+  ```
+  
   
  
