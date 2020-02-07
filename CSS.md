@@ -15,6 +15,26 @@
  
  ## 文字环绕图片效果
  *  对图片
-  ```设置
+  ```
+  <html>
+    <head>
+        <style>
+            .img-container {
+                word-break: break-all; //主要针对英文数字不环绕问题设置的
+            }
+            img {
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="img-container">
+                <img src="./1.png">
+                abccccccccccccccabccccccccccccccabccccccccccccccabccccccccccccccababccccccccccccccabccccccccccccccabccccccccccccccabccccccccccccccababccccccccccccccabccccccccccccccabccccccccccccccabccccccccccccccababccccccccccccccabccccccccccccccabccccccccccccccabccccccccccccccababccccccccccccccabccccccccccccccabccccccccccccccabccccccccccccccababccccccccccccccabccccccccccccccabccccccccccccccabccccccccccccccababccccccccccccccabccccccccccccccabccccccccccccccabccccccccccccccababccccccccccccccabccccccccccccccabccccccccccccccabccccccccccccccababccccccccccccccabccccccccccccccabccccccccccccccabccccccccccccccababccccccccccccccabccccccccccccccabccccccccccccccabccccccccccccccab
+            </div>
+        </div>
+    </body>
+</html>
   ```
  
