@@ -12,6 +12,35 @@
 > 除了节段，媒体和表单元素之外，还有众多的新元素，例如 `<mark>， <figure>， <figcaption>， <data>， <time>， <output>， <progress>`， 或者 `<meter>`和`<main>`，这增加了有效的 HTML5 元素的数量。
 * <iframe> 的改进
 > 使用 sandbox， seamless， 和 srcdoc 属性，作者们现在可以精确控制 `<iframe>` 元素的安全级别以及期望的渲染。
+### 在不支持HTML5的浏览器器中使用HTML5
+  * way1: 
+   
+      ```
+      section, article, aside, footer, header, nav, hgroup {
+        display:block;
+      }
+      ```
+  * way2(ie8及以下不支持改变不支持的元素的样式):
+      
+      ```
+         <!--[if lt IE 9]>
+           <script>
+             document.createElement("header" );
+             document.createElement("footer" );
+             document.createElement("section"); 
+             document.createElement("aside"  );
+             document.createElement("nav"    );
+             document.createElement("article"); 
+             document.createElement("hgroup" ); 
+             document.createElement("time"   );
+           </script>
+           <noscript>
+              <strong>Warning !</strong>
+              Because your browser does not support HTML5, some elements are simulated using JScript.
+              Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+           </noscript>
+         <![endif]-->
+      ```
 ## 二 杂项
 * Doctype作用? 严格模式？混杂模式？
    
