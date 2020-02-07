@@ -80,6 +80,10 @@
   ```
   
   * 最后一个浮动元素后 增加一个空元素 设置该空元素 clear: both
+  ## 怎么让Chrome支持小于12px 的文字？(摘抄50道CSS基础面试题)[https://segmentfault.com/a/1190000013325778?utm_source=tag-newest]
+  ```
+  p{font-size:10px;-webkit-transform:scale(0.8);} //0.8是缩放比例 
+  ```
   
   
  
