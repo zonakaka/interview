@@ -1,4 +1,40 @@
 # CSS
+## posititon 几种属性
+* relative
+  * 不脱离文档流
+  * 设置left/right/top/bottom时，相对自身发送偏移，当文档流仍旧保持默认位置
+* absolute
+  * 脱离文档流
+  * 相对于父元素（position不为static的，若没有则继续向上查找父元素直至body）定位
+* fixed
+  * 脱离文档流
+  * 相对于body定位
+* static
+
+***
+## 垂直水平居中方法
+* 
+  ```
+  //margin: auto法
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto
+  // margin 一定值法
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -自身高度的50%；
+    margin-left: -自身宽度的50%;  // 未知宽高度可采用transform: translate(-50%,-50%) 
+  // flex布局
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  ```
+  
+***
 ## BFC(以下都是摘自[mdn](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context))
 * 定义
 > 块级格式上下文。是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
