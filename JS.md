@@ -178,5 +178,40 @@ obj.f() // 1
    ```
    * 所有的字符串方法都不改变原字符串
    ***
+   ## 深拷贝
+   * 第一种方法：JSON.parse(JSON.stringfy(obj))
+   * 第二种方法：递归
+   ```
+   var _type = (t)=> Object.prototype.toString.call(t).toLowerCase().slice(8,-1)
+   function deepCopy(sourse,target) {
+        for (var prop in sourse) {
+
+            if (sourse.hasOwnProperty(prop)) {
+                if (_type(sourse[prop]) === 'array') {
+                    target[prop] = []
+                    deepCopy(sourse[prop], target[prop])
+                } else if (_type(sourse[prop]) === 'function') {
+                    target[prop] = sourse[prop]
+                } else if (_type(sourse[prop]) === '{}') {
+                    target[prop] = {}
+                    deepCopy(sourse[prop], target[prop])
+                } else {
+                     target[prop] = sourse[prop]
+                }
+            }
+        }
+        return target
+    }
+    var a = {
+        a: [1,2],
+        b: {a: 'a', b:{a:1}},
+        c: true,
+        d: null,
+        e: undefined,
+        f: function a(){},
+        g: NaN
+    }
+    var b = deepCopy(a,{})
+```
    
     
