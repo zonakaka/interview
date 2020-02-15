@@ -213,5 +213,61 @@ obj.f() // 1
     }
     var b = deepCopy(a,{})
 ```
+***
+## apply/call/bind
+### call 和 apply
+* 用途
+> 在特定的作用域中调用函数，实际上等于设置函数体内this对象的值
+* 作用
+    * 传递参数
+    * 扩大作用域，对象不需要与方法有任何耦合关系
+    ```
+        var a = 1
+        var obj = {
+            a: 2,
+            
+        }
+        funtion getVal(){
+           return this.a
+        }
+        getVal() //1
+        getVal.call(obj) //2
+        getVal.call(this) //1
+        getVal.call(window) //1
+    ```
+ ### bind
+ * 用途
+ > 创建一个函数的实例，其this值会被绑定到传给bind()函数的值
+ * 用法
+ ```
+ var a = 1
+ var o = {
+    a: 2
+}
+ function getVal(){
+    return this.a
+ }
+ var agent = getVal.bind(o)
+ agent() //2
+ ```
+## encodeURL()和encodeURLComponent()
+* encodeURI不会对本书属于URL的特殊字符编码，例如冒号、正斜杠、问号和井字号
+* encodeURIComponent则会对它发现的任何非标准字符进行编码
+***
+## eval()
+> 会将传入的参数当做实际的语句来解析，然后把执行结果插入到原位置
+## caller
+> 该属性保存着调用当前函数的函数的引用。如果是全局作用域中调用该属性，值为null
+```
+function outer() {inner()}
+function inner(){ 
+        
+    console.log(inner.caller) // arguments.callee.caller 与此等价 
+
+}
+outer() // outer函数源代码
+
+```
+
    
     
